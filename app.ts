@@ -25,3 +25,19 @@ const carro: {cor: string, numeroDoPneu: number, conversivel: boolean} = {
  * Ambos podem ser inicializadas de qualquer forma, mas depois precisam respeitar o tipo
  * E caso sejam tipados no início, seu primeiro valor tem que respeitar esse tipo
  */
+
+// Vamos usar pela primeira vez o tipo lista
+ const estudante: {nome: string, idade: number, materias: string[]} = {
+    nome: 'Amanda',
+    idade: 24,
+    materias: ['Algoritmos', 'Lógica para computação']
+ }
+
+ function listar(lista: string[]) {
+    for (const item of lista) {
+        console.log('- ' + item)
+    }
+}
+
+// A função reconhece estudante.materias como string[]
+listar(estudante.materias)
