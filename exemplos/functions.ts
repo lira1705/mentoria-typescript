@@ -34,3 +34,18 @@ function printarValor(num: number): void {
 }
 
 printarValor(3);
+
+function multiplicarValorPor2(numero: number) {
+    return numero * 2;
+}
+/**
+ * Funções também podem ser passadas como parâmetro. O tipo delas é estruturado assim:
+ * (parâmetro: tipo do parâmetro) => tipo do retorno
+*/ 
+function adicionarETratar(n1: number, n2: number, callback: (num: number) => void) {
+    resultado = n1 + n2;
+    callback(resultado); // Aqui ela é chamada 
+}
+
+adicionarETratar(1, 5, printarValor);
+console.log(adicionarETratar(1, 5, multiplicarValorPor2));
