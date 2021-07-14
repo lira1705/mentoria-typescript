@@ -1,0 +1,1 @@
+console.log('Esse arquivo JS está vinculado ao index.html pela tag src')
